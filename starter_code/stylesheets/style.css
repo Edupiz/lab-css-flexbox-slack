@@ -18,14 +18,12 @@ footer links grey: #454245
 }
 #nav-bar {
     background-color: #540B51;
-    width: 100vw;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 40px;
 }
 #slack-logo {
-    width: 100px;
+    width: 15vw;
+    max-width: 100px;
     padding: 20px 10px 0px 20px;
 }
 .boton-menu {
@@ -33,6 +31,9 @@ footer links grey: #454245
     padding-right: 20px;
     padding-top: 20px;
     border: none;   
+}
+#login{
+    visibility: hidden;
 }
 header {
     background-color: #540B51;
@@ -100,7 +101,7 @@ h1 {
     width: 100vw;
 }
 .menu {
-    display: none;
+    visibility: hidden;
 }
 /* acá empiezo con la primer seccion */
 #background-ivory {
@@ -193,9 +194,8 @@ h1 {
     font-weight: bolder;
 
 }
-
-
 #contenedor-numeros {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,7 +234,7 @@ li {
     color: white;
     padding-bottom: 20px;
 }
-/* here is the FOOOOTER */
+/* here is the FOOTER */
 #logo-slack {
     width: 50px;
     padding-top: 30px;
@@ -287,7 +287,9 @@ section a {
 }
 #end-footer {
     margin: 0px 20px 40px 20px;
-}
+    font-size: 0.8rem;
+        color: #454245;
+    }
 #numeros p {
     text-align: left;
     width: 20vw;
@@ -304,16 +306,13 @@ section a {
     background-color: white;
     border: none;
 }
-
-
 #boton-deabajo {
     border-color: white;
     background-color: #540B51;
     color: white;
 
 }   
-@media (width < 768px)  {
-    #boton-violeta{
+#boton-violeta{
         width: 90vw;
     }
     #numeros li{
@@ -324,10 +323,9 @@ section a {
     }
     #boton-debajo{
         border: none;
-        flex-grow: 2;
     }
-}
-@media (width > 768px) and (width < 1024px) {
+
+@media (width > 768px){
     header {
         background-image: url(../images/background-singup.png);
         background-size: cover;
@@ -345,10 +343,8 @@ section a {
             padding-top: 20%;
         }
         h1 {
-            font-size: 4.3rem;
+            font-size: 4rem;
             text-align: left;
-            padding-left: 0;
-            padding-right: 80px;
     
         }
         #text-header{
@@ -412,25 +408,57 @@ section a {
 
 
         }
-
         #boton-violeta {
             margin-right: 15px;
             flex-grow: 2;
             width: auto;
 
         }
-
         #boton-borde-vio{
             flex-grow: 1;
             width: auto;
         }
-
         #numeros {
-        
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            width: 100vw;
+            align-items: baseline;
+        }
+        #numeros p {
+            text-align: left;
+            width: 20vw;
 
         }
+        #numeros li {
+            margin-left: 50px;
+            margin-right: 50px;
         }
+        #lista-final {
+            flex-direction: row;
+            width: 95vw;
+            align-items: baseline;
+            justify-content: space-around;
+            margin: 0px;
+        }
+        #small-icons{
+            justify-content: flex-start;
+            gap: 5vw;
+        }
+    }
+/* @media (width > 1024px){
+   .menu{
+    visibility: visible;
+    background-color: #540B51;
+    padding-top: 20px;
+    border: none;
+    color: #F3EAE2;
+
+   }
+   .boton-menu{
+        visibility: hidden;;
+    }
+    .boton-enlace{
+    display: flex;
+flex-direction: row;
+align-items: center;
+margin: 0 10vw;
+   }
+} */
